@@ -63,8 +63,8 @@
         </div>
         <foot></foot>  
         <left :style="this.$store.state.left==true?'transform: translateX(0%)':'transform: translateX(-100%)'"></left>
-        <up :style="this.$store.state.up==true?'transform:translateY(0%)':'transform:translateY(100%)'"></up> 
-        
+        <!-- <up :style="this.$store.state.up==true?'transform:translateY(0%)':'transform:translateY(100%)'"></up>  -->
+        <!-- <router-view name='up' :style="this.$store.state.up==true?'transform:translateY(0%)':'transform:translateY(100%)'"></router-view> -->
     </div>
     
 </template>

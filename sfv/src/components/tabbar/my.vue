@@ -50,12 +50,13 @@
             <foot></foot>  
         </div>
         <left :style="this.$store.state.left==true?'transform: translateX(0%)':'transform: translateX(-100%)'"></left>
-                                        
+        <!-- <up :style="this.$store.state.up==true?'transform:translateY(0%)':'transform:translateY(100%)'"></up>    -->  <foot></foot>              
     </div>
 </template>
 <script>
 import Foot from "../../components/common/foot.vue"
 import Left from '../../components/home/left.vue'
+
 export default {
     data(){
         return{

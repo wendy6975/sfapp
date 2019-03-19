@@ -1,23 +1,25 @@
 <template>
     <div class="app-tabbar">
-                 <a href="javascript:;" id="home" :class="tabbarid=='home'?'homeA':''" @click=click class="home">
-                    <span @click=index>首页</span>
-                </a>
-                <a href="javascript:;" id="vip" :class="tabbarid=='vip'?'vipA':''" @click=vip class="vip">
-                    <span>会员中心</span>
-                </a>
-                <a href="javascript:;" id="send"  class="send" @click.stop="up">
-                    <span>寄件</span>
-                </a>
-                <a href="javascript:;" id="serve" @click=click :class="tabbarid=='serve'?'serveA':''" class="serve">
-                    <span>服务点</span>
-                </a>
-                <a href="javascript:;" id="my" :class="tabbarid=='my'?'myA':''" @click=click class="my">
-                    <span @click=my>我</span>
-                </a>
-            </div>
+        <a href="javascript:;" id="home" :class="tabbarid=='home'?'homeA':''" @click=click class="home">
+            <span @click=index>首页</span>
+        </a>
+        <a href="javascript:;" id="vip" :class="tabbarid=='vip'?'vipA':''" @click=vip class="vip">
+            <span>会员中心</span>
+        </a>
+        <a href="javascript:;" id="send"  class="send" @click.stop="up">
+            <span>寄件</span>
+        </a>
+        <a href="javascript:;" id="serve" @click=click :class="tabbarid=='serve'?'serveA':''" class="serve">
+            <span>服务点</span>
+        </a>
+        <a href="javascript:;" id="my" :class="tabbarid=='my'?'myA':''" @click=click class="my">
+            <span @click=my>我</span>
+        </a>
+        <up :style="this.$store.state.up==true?'transform:translateY(0%)':'transform:translateY(100%)'"></up>
+    </div>
 </template>
 <script>
+import Up from '../../components/home/up.vue'
 export default {
     data(){
         return{
@@ -39,10 +41,14 @@ export default {
             this.$router.push("/Vip");
         },
         up(){
-            this.$store.state.up=true;
+            /* */ this.$store.state.up=true;
+           
             this.$store.state.op8=true;
             
         }
+    },
+    components:{
+        Up
     }
 }
 </script>

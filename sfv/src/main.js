@@ -40,6 +40,9 @@ Vue.component(Swipe.name,Swipe);
 Vue.component(SwipeItem.name,SwipeItem);
  
 /**/
+/* import Up from './components/home/up.vue'
+Vue.component(Up); */
+
 
 /* import Foot from "./components/common/foot.vue"
 Vue.component(Foot); */

@@ -8,6 +8,7 @@ import My from './components/tabbar/my.vue'
 import Login from './components/tabbar/login.vue'
 import Register from './components/tabbar/register.vue'
 import Vip from './components/tabbar/vip.vue'
+import Up from './components/home/up.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -15,7 +16,8 @@ export default new Router({
         {path:'/',redirect:'Home'},
         {path:'/Home',component:Home,children:[
             {path:'/Home/',component:News},
-            {path:'/Home/Notes',component:Notes}
+            {path:'/Home/Notes',name:'notes',component:Notes},
+            
         ]},
         {path:'/My',component:My},
         {path:'/Login',component:Login},
