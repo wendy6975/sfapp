@@ -105,9 +105,7 @@ export default {
             
         }
     },
-    created(){
-        
-            
+    created(){        
     },
     components:{
         Left,Foot,Up
